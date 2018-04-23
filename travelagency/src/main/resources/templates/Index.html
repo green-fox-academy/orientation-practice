@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tourist Inform App</title>
+</head>
+<body>
+<div class="attractions">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Price</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Category</th>
+            <th>Duration</th>
+            <th>Recommended age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="attraction : ${attractions}" th:object="${attraction}">
+            <td th:text="*{attrName}"></td>
+            <td th:text="*{city}"></td>
+            <td th:text="*{price}"></td>
+            <td th:text="*{longitude}"></td>
+            <td th:text="*{lattitude}"></td>
+            <td th:text="*{category}"></td>
+            <td th:text="*{duration}"></td>
+            <td th:text="*{recommendedAge}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- -->
+<div class="attr-form">
+    <form action="#" th:action="@{/add}" th:object="${attrToEdit}" method="post">
+        <input th:if="*{id}" hidden type="number" name="id" th:value="*{id}"/>
+        <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="attrName" th:value="*{attrName}" required />
+        </div>
+        <div class="form-field">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" th:value="*{city}" required />
+        </div>
+        <div class="form-field">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" th:value="*{price}" required />
+        </div>
+        <div class="form-field">
+            <label for="longitude">Longitude:</label>
+            <input type="number" step="0.0001" id="longitude" name="longitude" th:value="*{longitude}" required />
+        </div>
+        <div class="form-field">
+            <label for="latitude">Latitude:</label>
+            <input type="number" step="0.0001" id="latitude" name="lattitude" th:value="*{lattitude}" required />
+        </div>
+        <div class="form-field">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" th:value="*{category}" required />
+        </div>
+        <div class="form-field">
+            <label for="duration">Duration:</label>
+            <input type="number" id="duration" name="duration" th:value="*{duration}" required />
+        </div>
+        <div class="form-field">
+            <label for="recommended-age">Recommended age:</label>
+            <input type="number" step="0.1" id="recommended-age" name="recommendedAge" th:value="*{recommendedAge}" required />
+        </div>
+        <div class="form-button">
+            <input type="submit" value="Elküldés" />
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>
