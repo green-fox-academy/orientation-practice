@@ -1,0 +1,81 @@
+﻿@model StgElse.ViewModels.AttractionsViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Price</th>
+            <th>Longitude</th>
+            <th>Lattitude</th>
+            <th>Category</th>
+            <th>Duration</th>
+            <th>Reccommended age</th>
+        </tr>
+        <tbody>
+
+            @foreach (var attractions in Model.Attractions)
+            {
+                <tr>
+                    <td>@attractions.AttrName</td>
+                    <td>@attractions.City</td>
+                    <td>@attractions.Price</td>
+                    <td>@attractions.Longitude</td>
+                    <td>@attractions.Lattitude</td>
+                    <td>@attractions.Category</td>
+                    <td>@attractions.Duration</td>
+                    <td>@attractions.RecommendedAge</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    @if (Model.Selected != null)
+    {
+
+        <form action="add" method="post">
+            <input type="number" hidden name="id" id="id" value="@Model.Selected.Id">
+            <input type="text" required name="attrName" id="attrName" placeholder="Name" value="@Model.Selected.AttrName">
+            <input type="text" required name="city" id="city" placeholder="City" value="@Model.Selected.City">
+            <input type="number" required name="price" id="price" placeholder="Price" value="@Model.Selected.Price">
+            <input type="number" required name="longitude" id="longitude"
+                   placeholder="Longitude" value="@Model.Selected.Longitude">
+            <input type="number" required name="lattitude" id="lattitude"
+                   placeholder="Lattitude" value="@Model.Selected.Lattitude">
+            <input type="text" required name="category" id="category" placeholder="Category" value="@Model.Selected.Category">
+            <input type="number" required name="recommendedAge" id="recommendedAge"
+                   placeholder="Recommended age" value="@Model.Selected.RecommendedAge">
+            <input type="number" required name="duration" id="duration" placeholder="Duration" value="@Model.Selected.Duration">
+            <input type="submit" name="Add"></input>
+        </form>
+    }
+    else
+    {
+        <form action="add" method="post">
+            <input type="number" hidden name="id">
+            <input type="text" required name="attrName" id="attrName" placeholder="Name" >
+            <input type="text" required name="city" id="city" placeholder="City" >
+            <input type="number" required name="price" id="price" placeholder="Price" >
+            <input type="number" required name="longitude" id="longitude"
+                   placeholder="Longitude" >
+            <input type="number" required name="lattitude" id="lattitude"
+                   placeholder="Lattitude" >
+            <input type="text" required name="category" id="category" placeholder="Category" >
+            <input type="number" required name="recommendedAge" id="recommendedAge"
+                   placeholder="Recommended age" >
+            <input type="number" required name="duration" id="duration" placeholder="Duration">
+            <input type="submit" name="Add"></input>
+        </form>
+
+    }
+
+
+</body>
+</html>

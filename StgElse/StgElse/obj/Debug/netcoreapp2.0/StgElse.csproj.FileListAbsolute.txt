@@ -1,0 +1,11 @@
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\bin\Debug\netcoreapp2.0\StgElse.deps.json
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\bin\Debug\netcoreapp2.0\StgElse.runtimeconfig.json
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\bin\Debug\netcoreapp2.0\StgElse.runtimeconfig.dev.json
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\bin\Debug\netcoreapp2.0\StgElse.dll
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\bin\Debug\netcoreapp2.0\StgElse.pdb
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\obj\Debug\netcoreapp2.0\StgElse.csprojResolveAssemblyReference.cache
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\obj\Debug\netcoreapp2.0\StgElse.csproj.CoreCompileInputs.cache
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\obj\Debug\netcoreapp2.0\StgElse.AssemblyInfoInputs.cache
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\obj\Debug\netcoreapp2.0\StgElse.AssemblyInfo.cs
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\obj\Debug\netcoreapp2.0\StgElse.dll
+C:\Users\Mark Kovari\source\repos\StgElse\StgElse\obj\Debug\netcoreapp2.0\StgElse.pdb
