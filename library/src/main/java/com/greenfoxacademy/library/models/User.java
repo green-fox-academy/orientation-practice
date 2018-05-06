@@ -1,7 +1,6 @@
 package com.greenfoxacademy.library.models;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -14,15 +13,11 @@ public class User {
 
     private String name;
 
-    @OneToMany(mappedBy = "book_id")
-    private List<Book> borrowedBooks;
-
     public User() {
     }
 
-    public User(String name, List<Book> borrowedBooks) {
+    public User(String name) {
         this.name = name;
-        this.borrowedBooks = borrowedBooks;
     }
 
     public Integer getId() {
@@ -41,11 +36,4 @@ public class User {
         this.name = name;
     }
 
-    public List<Book> getBorrowedBooks() {
-        return borrowedBooks;
-    }
-
-    public void setBorrowedBooks(List<Book> borrowedBooks) {
-        this.borrowedBooks = borrowedBooks;
-    }
 }
