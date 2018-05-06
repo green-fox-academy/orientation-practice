@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -20,9 +22,18 @@ public class RESTController {
     }
 
     @GetMapping("/books")
-    public List<Book> books() {
-        return (List<Book>) bookRepository.findAll();
+    public ArrayList<Book> books() {
+        return new ArrayList<Book>(Arrays.asList(
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd"),
+                new Book("22", "qdasdad", "asdasd")
+        ));
 
     }
-    
+
 }
