@@ -17,7 +17,7 @@ public class Book {
     @Column(name = "isbn")
     private String ISBN;
 
-    @OneToOne(mappedBy = "user_id")
+    @OneToOne(mappedBy = "user_id", targetEntity = User.class)
     private List<User> borrowedBy;
 
     public Book() {

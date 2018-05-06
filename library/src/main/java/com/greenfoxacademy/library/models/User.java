@@ -10,7 +10,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     @Column(name = "user_id")
-
     private Integer id;
 
     private String name;
