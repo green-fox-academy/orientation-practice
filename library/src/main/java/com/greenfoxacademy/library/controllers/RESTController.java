@@ -23,16 +23,7 @@ public class RESTController {
 
     @GetMapping("/books")
     public ArrayList<Book> books() {
-        return new ArrayList<Book>(Arrays.asList(
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd"),
-                new Book("22", "qdasdad", "asdasd")
-        ));
+        return (ArrayList<Book>) bookRepository.findAll();
 
     }
 
